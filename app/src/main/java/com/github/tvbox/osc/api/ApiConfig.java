@@ -135,7 +135,7 @@ public class ApiConfig {
          if (appSource.isEmpty()) {
         	appSource = "https://gitee.com/wangjie310/tv/raw/main/wj.json";
         }
-        String apiUrl = Hawk.get(HawkConfig.API_URL, appSource)
+        String apiUrl = Hawk.get(HawkConfig.API_URL, appSource);
         File cache = new File(App.getInstance().getFilesDir().getAbsolutePath() + "/" + MD5.encode(apiUrl));
         if (useCache && cache.exists()) {
             try {
